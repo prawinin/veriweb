@@ -1,0 +1,17 @@
+FROM rocm/pytorch:rocm10.0_ubuntu26.04_py3.14_pytorch_release_2.13.0
+WORKDIR /app
+ENV PYTHONPATH=/app/backend:/app OMP_NUM_THREADS=6 TOKENIZERS_PARALLELISM=false HF_HUB_DOWNLOAD_TIMEOUT=30 HF_HUB_ETAG_TIMEOUT=15
+COPY requirements-amd.txt /app/requirements.txt
+RUN python3 -m pip install --no-cache-dir --no-deps "setuptools>=75,<90" "wheel>=0.45,<1" \
+    && python3 -m pip install --no-cache-dir --no-deps -r /app/requirements.txt \
+    && python3 -c "import torch; assert torch.version.hip, 'ROCm PyTorch was replaced'"
+COPY pyproject.toml /app/
+COPY backend/veriweb /app/backend/veriweb
+COPY app.py /app/app.py
+COPY scripts/serve_rocm.py scripts/amd_entrypoint.py /app/scripts/
+RUN python3 -m pip install --no-cache-dir --no-deps --no-build-isolation /app \
+    && useradd --create-home --uid 10001 researcher \
+    && mkdir -p /app/output /models \
+    && chown -R researcher:researcher /app/output /models
+USER researcher
+ENTRYPOINT ["python3", "/app/scripts/amd_entrypoint.py"]

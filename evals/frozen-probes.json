@@ -1,0 +1,846 @@
+{
+  "version": 1,
+  "description": "New frozen synthetic probes authored after production changes; run once without subsequent tuning. Not independently authored, not live-web or public-source validation.",
+  "cases": [
+    {
+      "id": "probe-01",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "What is Aurora cost according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/aurora",
+          "text": "Aurora cost is USD 43 per unit for its standard product."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/aurora",
+          "text": "Aurora uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/aurora",
+          "text": "Aurora documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "cost",
+          "subject": "Aurora",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "USD 43 per unit",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probe-02",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "What is Beryl lifetime according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/beryl",
+          "text": "Beryl operating lifetime is 1713 hours under the published test protocol."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/beryl",
+          "text": "Beryl uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/beryl",
+          "text": "Beryl documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "lifetime",
+          "subject": "Beryl",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "1713 hours",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probe-03",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "What is Cedar capacity according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/cedar",
+          "text": "Cedar storage capacity is 9 TB under the standard configuration."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/cedar",
+          "text": "Cedar uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/cedar",
+          "text": "Cedar documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "capacity",
+          "subject": "Cedar",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "9 TB",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probe-04",
+      "fixture_kind": "controlled_synthetic",
+      "category": "comparison",
+      "question": "What is Dahlia availability according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/dahlia",
+          "text": "Dahlia is invitation only under the current distribution program."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/dahlia",
+          "text": "Dahlia uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/dahlia",
+          "text": "Dahlia documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "availability",
+          "subject": "Dahlia",
+          "kind": "availability",
+          "status": "supported",
+          "values": [
+            {
+              "value": "invitation only",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probe-05",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "What is Ember cost according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/ember",
+          "text": "Ember cost is USD 47 per unit for its standard product."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/ember",
+          "text": "Ember uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/ember",
+          "text": "Ember documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "cost",
+          "subject": "Ember",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "USD 47 per unit",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probe-06",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "What is Fjord lifetime according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/fjord",
+          "text": "Fjord operating lifetime is 1765 hours under the published test protocol."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/fjord",
+          "text": "Fjord uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/fjord",
+          "text": "Fjord documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "lifetime",
+          "subject": "Fjord",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "1765 hours",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probe-07",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "What is Garnet capacity according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/garnet",
+          "text": "Garnet storage capacity is 13 TB under the standard configuration."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/garnet",
+          "text": "Garnet uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/garnet",
+          "text": "Garnet documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "capacity",
+          "subject": "Garnet",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "13 TB",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probe-08",
+      "fixture_kind": "controlled_synthetic",
+      "category": "comparison",
+      "question": "What is Hazel availability according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/hazel",
+          "text": "Hazel is invitation only under the current distribution program."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/hazel",
+          "text": "Hazel uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/hazel",
+          "text": "Hazel documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "availability",
+          "subject": "Hazel",
+          "kind": "availability",
+          "status": "supported",
+          "values": [
+            {
+              "value": "invitation only",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probe-09",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "What is Indigo cost according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/indigo",
+          "text": "Indigo cost is USD 51 per unit for its standard product."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/indigo",
+          "text": "Indigo uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/indigo",
+          "text": "Indigo documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "cost",
+          "subject": "Indigo",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "USD 51 per unit",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probe-10",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "What is Jasper lifetime according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/jasper",
+          "text": "Jasper operating lifetime is 1817 hours under the published test protocol."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/jasper",
+          "text": "Jasper uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/jasper",
+          "text": "Jasper documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "lifetime",
+          "subject": "Jasper",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "1817 hours",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probe-11",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "What is Kestrel capacity according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/kestrel",
+          "text": "Kestrel storage capacity is 17 TB under the standard configuration."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/kestrel",
+          "text": "Kestrel uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/kestrel",
+          "text": "Kestrel documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "capacity",
+          "subject": "Kestrel",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "17 TB",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probe-12",
+      "fixture_kind": "controlled_synthetic",
+      "category": "comparison",
+      "question": "What is Linden availability according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/linden",
+          "text": "Linden is invitation only under the current distribution program."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/linden",
+          "text": "Linden uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/linden",
+          "text": "Linden documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "availability",
+          "subject": "Linden",
+          "kind": "availability",
+          "status": "supported",
+          "values": [
+            {
+              "value": "invitation only",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probe-13",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "What is Marble cost according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/marble",
+          "text": "Marble cost is USD 55 per unit for its standard product."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/marble",
+          "text": "Marble uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/marble",
+          "text": "Marble documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "cost",
+          "subject": "Marble",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "USD 55 per unit",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probe-14",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "What is Nimbus lifetime according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/nimbus",
+          "text": "Nimbus operating lifetime is 1869 hours under the published test protocol."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/nimbus",
+          "text": "Nimbus uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/nimbus",
+          "text": "Nimbus documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "lifetime",
+          "subject": "Nimbus",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "1869 hours",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probe-15",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "What is Onyx capacity according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/onyx",
+          "text": "Onyx storage capacity is 21 TB under the standard configuration."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/onyx",
+          "text": "Onyx uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/onyx",
+          "text": "Onyx documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "capacity",
+          "subject": "Onyx",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "21 TB",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probe-16",
+      "fixture_kind": "controlled_synthetic",
+      "category": "comparison",
+      "question": "What is Poppy availability according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/poppy",
+          "text": "Poppy is invitation only under the current distribution program."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/poppy",
+          "text": "Poppy uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/poppy",
+          "text": "Poppy documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "availability",
+          "subject": "Poppy",
+          "kind": "availability",
+          "status": "supported",
+          "values": [
+            {
+              "value": "invitation only",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probe-17",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "What is Raven cost according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/raven",
+          "text": "Raven cost is USD 59 per unit for its standard product."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/raven",
+          "text": "Raven uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/raven",
+          "text": "Raven documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "cost",
+          "subject": "Raven",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "USD 59 per unit",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probe-18",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "What is Saffron lifetime according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/saffron",
+          "text": "Saffron operating lifetime is 1921 hours under the published test protocol."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/saffron",
+          "text": "Saffron uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/saffron",
+          "text": "Saffron documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "lifetime",
+          "subject": "Saffron",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "1921 hours",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probe-19",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "What is Topaz capacity according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/topaz",
+          "text": "Topaz storage capacity is 25 TB under the standard configuration."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/topaz",
+          "text": "Topaz uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/topaz",
+          "text": "Topaz documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "capacity",
+          "subject": "Topaz",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "25 TB",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probe-20",
+      "fixture_kind": "controlled_synthetic",
+      "category": "comparison",
+      "question": "What is Umber availability according to the supplied specification?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled specification",
+          "url": "https://probe0.example/umber",
+          "text": "Umber is invitation only under the current distribution program."
+        },
+        {
+          "id": "s2",
+          "title": "Controlled specification",
+          "url": "https://probe1.example/umber",
+          "text": "Umber uses the standard product configuration; the report distinguishes usable specifications from manufacturing targets."
+        },
+        {
+          "id": "s3",
+          "title": "Controlled specification",
+          "url": "https://probe2.example/umber",
+          "text": "Umber documentation describes a controlled specification, and excludes speculative future product revisions."
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "availability",
+          "subject": "Umber",
+          "kind": "availability",
+          "status": "supported",
+          "values": [
+            {
+              "value": "invitation only",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

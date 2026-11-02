@@ -1,0 +1,49 @@
+[project]
+name = "veriweb"
+version = "0.1.0"
+description = "Evidence-first research on open compute"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115,<1", "uvicorn>=0.34,<1", "httpx>=0.28,<1",
+  "pydantic-settings>=2.8,<3", "trafilatura>=2,<3", "rank-bm25>=0.2.2,<1",
+  "ddgs>=9,<10", "numpy>=2,<3", "beautifulsoup4>=4.13,<5", "tldextract>=5,<6",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "pytest-asyncio>=0.25,<2", "ruff>=0.11,<1", "mypy>=1.15,<2", "types-tqdm>=4.67,<5"]
+embeddings = ["sentence-transformers>=3,<6"]
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["backend"]
+include = ["veriweb*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["backend"]
+testpaths = ["backend/tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+explicit_package_bases = true
+mypy_path = "backend"
+exclude = ["backend/tests"]
+
+[[tool.mypy.overrides]]
+module = ["trafilatura.*", "rank_bm25.*", "ddgs.*", "sentence_transformers.*", "torch.*", "PyQt6.*"]
+follow_imports = "skip"
+follow_imports_for_stubs = true
+ignore_missing_imports = true

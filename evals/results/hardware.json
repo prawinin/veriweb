@@ -1,0 +1,56 @@
+{
+  "recorded_date": "2026-11-01",
+  "cpu": "AMD Ryzen 5 5600H",
+  "gpu": "AMD Radeon RX 6500M",
+  "torch": "2.14.1",
+  "hip": "7.2.53211",
+  "rocm_kernel": {
+    "torch": "2.14.1",
+    "hip": "7.2.53211",
+    "environment": {
+      "HIP_VISIBLE_DEVICES": "0",
+      "HSA_OVERRIDE_GFX_VERSION": "10.3.0",
+      "ROCR_VISIBLE_DEVICES": "0"
+    },
+    "success": true,
+    "device": "AMD Radeon RX 6500",
+    "operation": "512x512 fp16 matrix multiplication",
+    "max_absolute_error": 0.27093505859375,
+    "allocated_bytes": 34603008,
+    "elapsed_ms": 1681.24
+  },
+  "inference": {
+    "backend": "Vulkan",
+    "model": "Qwen2.5-3B-Q4_K_M",
+    "device_selection": "Vulkan1",
+    "completion_tokens": 86,
+    "wall_seconds": 2.681,
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 91,
+      "prompt_ms": 297.839,
+      "prompt_per_token_ms": 3.272956043956044,
+      "prompt_per_second": 305.5341980063054,
+      "predicted_n": 86,
+      "predicted_ms": 2318.813,
+      "predicted_per_token_ms": 27.28015294117647,
+      "predicted_per_second": 36.656685985458935
+    },
+    "observed_total_discrete_vram_bytes": 2296483840
+  },
+  "live_research": {
+    "model": "Qwen2.5-3B-Q4_K_M",
+    "backend": "vulkan (configured)",
+    "retrieval_seconds": 32.7,
+    "generation_seconds": 18.68,
+    "tokens_per_second": 20.94,
+    "ranking": "BM25 + vector RRF",
+    "paragraphs": 413
+  },
+  "limits": [
+    "Single-device development measurements, not a standardized throughput benchmark.",
+    "Total observed VRAM includes driver and other allocations.",
+    "ROCm operation verification is separate from Vulkan LLM inference.",
+    "Native ROCm LLM generation and candidate-container execution remain unverified."
+  ]
+}

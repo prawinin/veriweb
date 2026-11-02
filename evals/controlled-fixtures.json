@@ -1,0 +1,1331 @@
+{
+  "version": 1,
+  "description": "Twenty authored controlled synthetic fixtures. These are not live-web benchmarks or proven unseen held-out questions. Never use expected answers in production prompts.",
+  "cases": [
+    {
+      "id": "numeric-population",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "What was the population of Alder in 2025, measured in residents?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture numeric-population, document 1",
+          "url": "https://fixture-a.example/numeric-population",
+          "text": "Alder population in 2025 was 12,400 residents.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture numeric-population, document 2",
+          "url": "https://fixture-b.example/numeric-population",
+          "text": "The Alder census used a household register covering the 2025 calendar year; its geographic boundary was the municipal boundary.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture numeric-population, document 3",
+          "url": "https://fixture-c.example/numeric-population",
+          "text": "The Alder census methodology excluded temporary visitors and counted usual residents only.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "population",
+          "aliases": [
+            "count",
+            "2025 population"
+          ],
+          "subject": "Alder",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "12,400 residents",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ],
+      "expected_conflicts": [],
+      "allowed_conflicts": []
+    },
+    {
+      "id": "numeric-funding",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "How much funding did the Beacon program receive in 2025, in USD?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture numeric-funding, document 1",
+          "url": "https://fixture-a.example/numeric-funding",
+          "text": "Beacon received USD 23 million in program funding for fiscal year 2025; this is the awarded total, not an application target.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture numeric-funding, document 2",
+          "url": "https://fixture-b.example/numeric-funding",
+          "text": "Beacon applications were reviewed in three rounds during 2025. Funding awards covered infrastructure and training.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture numeric-funding, document 3",
+          "url": "https://fixture-c.example/numeric-funding",
+          "text": "The Beacon audit separated fiscal year 2025 awards from future pledges; only completed awards were booked.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "funding",
+          "aliases": [
+            "2025 funding"
+          ],
+          "subject": "Beacon",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "USD 23 million",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ],
+      "expected_conflicts": [],
+      "allowed_conflicts": []
+    },
+    {
+      "id": "numeric-lifetime",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "What is the rated operating lifetime of the Cobalt sensor, in hours?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture numeric-lifetime, document 1",
+          "url": "https://fixture-a.example/numeric-lifetime",
+          "text": "The Cobalt sensor has a rated operating lifetime of 8,600 hours under the standard continuous operating test.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture numeric-lifetime, document 2",
+          "url": "https://fixture-b.example/numeric-lifetime",
+          "text": "Cobalt lifetime testing used room temperature and nominal voltage. The result concerns operating time rather than storage time.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture numeric-lifetime, document 3",
+          "url": "https://fixture-c.example/numeric-lifetime",
+          "text": "The Cobalt maintenance note distinguishes its operating lifetime from the separate warranty period.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "lifetime",
+          "aliases": [
+            "operating lifetime"
+          ],
+          "subject": "Cobalt",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "8,600 hours",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ],
+      "expected_conflicts": [],
+      "allowed_conflicts": []
+    },
+    {
+      "id": "numeric-cost",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "What was the unit purchase cost of the Dahlia pump in EUR during 2025?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture numeric-cost, document 1",
+          "url": "https://fixture-a.example/numeric-cost",
+          "text": "The Dahlia pump unit purchase cost in 2025 was EUR 475 per pump, excluding installation and sales tax.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture numeric-cost, document 2",
+          "url": "https://fixture-b.example/numeric-cost",
+          "text": "Dahlia procurement records separate equipment purchase cost from installation labor. The quoted schedule applies to 2025 orders.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture numeric-cost, document 3",
+          "url": "https://fixture-c.example/numeric-cost",
+          "text": "The Dahlia equipment specification identifies one pump as the procurement unit and excludes accessories.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "cost",
+          "aliases": [
+            "unit cost",
+            "purchase cost"
+          ],
+          "subject": "Dahlia",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "EUR 475 per pump",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ],
+      "expected_conflicts": [],
+      "allowed_conflicts": []
+    },
+    {
+      "id": "numeric-date",
+      "fixture_kind": "controlled_synthetic",
+      "category": "numeric",
+      "question": "On what exact date was the Elm archive released to the public?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture numeric-date, document 1",
+          "url": "https://fixture-a.example/numeric-date",
+          "text": "The Elm archive was released to the public on 2025-09-18. This is the public release date rather than the internal approval date.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture numeric-date, document 2",
+          "url": "https://fixture-b.example/numeric-date",
+          "text": "The Elm archive release included searchable metadata and downloadable records. Internal testing happened before public access.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture numeric-date, document 3",
+          "url": "https://fixture-c.example/numeric-date",
+          "text": "The Elm archive publication process required a preservation check followed by public release approval.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "release date",
+          "aliases": [
+            "date",
+            "public release date"
+          ],
+          "subject": "Elm",
+          "kind": "date",
+          "status": "supported",
+          "values": [
+            {
+              "value": "2025-09-18",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        }
+      ],
+      "expected_conflicts": [],
+      "allowed_conflicts": []
+    },
+    {
+      "id": "comparison-capacity",
+      "fixture_kind": "controlled_synthetic",
+      "category": "comparison",
+      "question": "Compare the storage capacity of Iris and Juniper in TB. Report capacity for each system.",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture comparison-capacity, document 1",
+          "url": "https://fixture-a.example/comparison-capacity",
+          "text": "Iris storage capacity is 24 TB of usable capacity with its standard redundancy configuration enabled.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture comparison-capacity, document 2",
+          "url": "https://fixture-b.example/comparison-capacity",
+          "text": "Juniper storage capacity is 36 TB of usable capacity under the same standard redundancy configuration.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture comparison-capacity, document 3",
+          "url": "https://fixture-c.example/comparison-capacity",
+          "text": "The Iris and Juniper comparison uses usable rather than raw storage capacity; both systems run the standard configuration.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "capacity",
+          "aliases": [
+            "storage capacity"
+          ],
+          "subject": "Iris",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "24 TB",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        },
+        {
+          "dimension": "capacity",
+          "aliases": [
+            "storage capacity"
+          ],
+          "subject": "Juniper",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "36 TB",
+              "source_ids": [
+                "s2"
+              ]
+            }
+          ]
+        }
+      ],
+      "expected_conflicts": [],
+      "allowed_conflicts": []
+    },
+    {
+      "id": "comparison-cost",
+      "fixture_kind": "controlled_synthetic",
+      "category": "comparison",
+      "question": "Compare the monthly subscription cost of Kite and Lotus in USD for the standard plan.",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture comparison-cost, document 1",
+          "url": "https://fixture-a.example/comparison-cost",
+          "text": "Kite standard plan monthly subscription cost is USD 18 per month, before applicable sales tax and optional add-ons.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture comparison-cost, document 2",
+          "url": "https://fixture-b.example/comparison-cost",
+          "text": "Lotus standard plan monthly subscription cost is USD 27 per month, before applicable sales tax and optional add-ons.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture comparison-cost, document 3",
+          "url": "https://fixture-c.example/comparison-cost",
+          "text": "The Kite and Lotus pricing comparison concerns individual standard plans billed monthly, with no annual commitment.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "cost",
+          "aliases": [
+            "monthly cost"
+          ],
+          "subject": "Kite",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "USD 18 per month",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        },
+        {
+          "dimension": "cost",
+          "aliases": [
+            "monthly cost"
+          ],
+          "subject": "Lotus",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "USD 27 per month",
+              "source_ids": [
+                "s2"
+              ]
+            }
+          ]
+        }
+      ],
+      "expected_conflicts": [],
+      "allowed_conflicts": []
+    },
+    {
+      "id": "comparison-availability",
+      "fixture_kind": "controlled_synthetic",
+      "category": "comparison",
+      "question": "Compare the public availability of Maple and Nori, and their operating lifetimes in hours.",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture comparison-availability, document 1",
+          "url": "https://fixture-a.example/comparison-availability",
+          "text": "Maple is publicly available. Maple has an operating lifetime of 900 hours in the continuous-use test at nominal voltage.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture comparison-availability, document 2",
+          "url": "https://fixture-b.example/comparison-availability",
+          "text": "Nori is invitation only. Nori has an operating lifetime of 1,250 hours in the same continuous-use test at nominal voltage.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture comparison-availability, document 3",
+          "url": "https://fixture-c.example/comparison-availability",
+          "text": "The Maple and Nori catalog uses public availability to mean unrestricted ordering. Invitation-only ordering requires prior approval.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "availability",
+          "aliases": [],
+          "subject": "Maple",
+          "kind": "availability",
+          "status": "supported",
+          "values": [
+            {
+              "value": "publicly available",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        },
+        {
+          "dimension": "availability",
+          "aliases": [],
+          "subject": "Nori",
+          "kind": "availability",
+          "status": "supported",
+          "values": [
+            {
+              "value": "invitation only",
+              "source_ids": [
+                "s2"
+              ]
+            }
+          ]
+        },
+        {
+          "dimension": "lifetime",
+          "aliases": [],
+          "subject": "Maple",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "900 hours",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        },
+        {
+          "dimension": "lifetime",
+          "aliases": [],
+          "subject": "Nori",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "1,250 hours",
+              "source_ids": [
+                "s2"
+              ]
+            }
+          ]
+        }
+      ],
+      "expected_conflicts": [],
+      "allowed_conflicts": []
+    },
+    {
+      "id": "comparison-funding",
+      "fixture_kind": "controlled_synthetic",
+      "category": "comparison",
+      "question": "Compare the 2025 awarded funding for Olive and Poppy in GBP.",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture comparison-funding, document 1",
+          "url": "https://fixture-a.example/comparison-funding",
+          "text": "Olive was awarded GBP 6 million in funding in fiscal year 2025. This figure excludes proposed future funding.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture comparison-funding, document 2",
+          "url": "https://fixture-b.example/comparison-funding",
+          "text": "Poppy was awarded GBP 9 million in funding in fiscal year 2025. This figure excludes proposed future funding.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture comparison-funding, document 3",
+          "url": "https://fixture-c.example/comparison-funding",
+          "text": "The Olive and Poppy funding records use the same fiscal year and count awarded funding, not pending applications.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "funding",
+          "aliases": [],
+          "subject": "Olive",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "GBP 6 million",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        },
+        {
+          "dimension": "funding",
+          "aliases": [],
+          "subject": "Poppy",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "GBP 9 million",
+              "source_ids": [
+                "s2"
+              ]
+            }
+          ]
+        }
+      ],
+      "expected_conflicts": [],
+      "allowed_conflicts": []
+    },
+    {
+      "id": "comparison-partial",
+      "fixture_kind": "controlled_synthetic",
+      "category": "comparison",
+      "question": "Compare Quill and Reed: give each operating lifetime in hours and each unit cost in USD.",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture comparison-partial, document 1",
+          "url": "https://fixture-a.example/comparison-partial",
+          "text": "Quill has an operating lifetime of 700 hours and a unit cost of USD 45 per unit under the standard procurement contract.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture comparison-partial, document 2",
+          "url": "https://fixture-b.example/comparison-partial",
+          "text": "Reed has an operating lifetime of 950 hours. The procurement register does not disclose any unit cost for Reed.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture comparison-partial, document 3",
+          "url": "https://fixture-c.example/comparison-partial",
+          "text": "Quill and Reed lifetime tests used identical operating conditions. Reed pricing remains absent from the published register.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "lifetime",
+          "aliases": [],
+          "subject": "Quill",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "700 hours",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        },
+        {
+          "dimension": "cost",
+          "aliases": [
+            "unit cost"
+          ],
+          "subject": "Quill",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "USD 45 per unit",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        },
+        {
+          "dimension": "lifetime",
+          "aliases": [],
+          "subject": "Reed",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "950 hours",
+              "source_ids": [
+                "s2"
+              ]
+            }
+          ]
+        },
+        {
+          "dimension": "cost",
+          "aliases": [
+            "unit cost"
+          ],
+          "subject": "Reed",
+          "kind": "quantitative",
+          "status": "missing",
+          "values": []
+        }
+      ],
+      "expected_conflicts": [],
+      "allowed_conflicts": []
+    },
+    {
+      "id": "conflict-population",
+      "fixture_kind": "controlled_synthetic",
+      "category": "conflict",
+      "question": "What population figures do the two records report for Sable in 2025? Identify any same-scope conflict.",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture conflict-population, document 1",
+          "url": "https://fixture-a.example/conflict-population",
+          "text": "Sable municipal population in calendar year 2025 was 41,200 residents, counting usual residents inside the municipal boundary.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture conflict-population, document 2",
+          "url": "https://fixture-b.example/conflict-population",
+          "text": "Sable municipal population in calendar year 2025 was 44,900 residents, counting usual residents inside the municipal boundary.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture conflict-population, document 3",
+          "url": "https://fixture-c.example/conflict-population",
+          "text": "The Sable population records use the same municipal boundary, definition of usual residence, and calendar year 2025.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "population",
+          "aliases": [
+            "count"
+          ],
+          "subject": "Sable",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "41,200 residents",
+              "source_ids": [
+                "s1"
+              ]
+            },
+            {
+              "value": "44,900 residents",
+              "source_ids": [
+                "s2"
+              ]
+            }
+          ]
+        }
+      ],
+      "expected_conflicts": [
+        {
+          "source_ids": [
+            "s1",
+            "s2"
+          ],
+          "kind": "numeric"
+        }
+      ],
+      "allowed_conflicts": [
+        {
+          "source_ids": [
+            "s1",
+            "s2"
+          ],
+          "kind": "numeric"
+        }
+      ]
+    },
+    {
+      "id": "conflict-cost",
+      "fixture_kind": "controlled_synthetic",
+      "category": "conflict",
+      "question": "What unit cost figures are reported for Tern in the standard 2025 contract? Identify any conflict.",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture conflict-cost, document 1",
+          "url": "https://fixture-a.example/conflict-cost",
+          "text": "Tern unit cost under the standard 2025 contract is USD 82 per unit, before tax, for orders of one standard unit.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture conflict-cost, document 2",
+          "url": "https://fixture-b.example/conflict-cost",
+          "text": "Tern unit cost under the standard 2025 contract is USD 96 per unit, before tax, for orders of one standard unit.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture conflict-cost, document 3",
+          "url": "https://fixture-c.example/conflict-cost",
+          "text": "Both Tern price records refer to the same standard 2025 contract and order quantity; neither includes tax or accessories.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "cost",
+          "aliases": [
+            "unit cost"
+          ],
+          "subject": "Tern",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "USD 82 per unit",
+              "source_ids": [
+                "s1"
+              ]
+            },
+            {
+              "value": "USD 96 per unit",
+              "source_ids": [
+                "s2"
+              ]
+            }
+          ]
+        }
+      ],
+      "expected_conflicts": [
+        {
+          "source_ids": [
+            "s1",
+            "s2"
+          ],
+          "kind": "numeric"
+        }
+      ],
+      "allowed_conflicts": [
+        {
+          "source_ids": [
+            "s1",
+            "s2"
+          ],
+          "kind": "numeric"
+        }
+      ]
+    },
+    {
+      "id": "conflict-lifetime",
+      "fixture_kind": "controlled_synthetic",
+      "category": "conflict",
+      "question": "What rated lifetime figures are reported for Umber in the continuous-use test? Identify any conflict.",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture conflict-lifetime, document 1",
+          "url": "https://fixture-a.example/conflict-lifetime",
+          "text": "Umber rated lifetime is 3,100 hours in the continuous-use test at room temperature and nominal voltage, revision A.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture conflict-lifetime, document 2",
+          "url": "https://fixture-b.example/conflict-lifetime",
+          "text": "Umber rated lifetime is 3,700 hours in the continuous-use test at room temperature and nominal voltage, revision A.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture conflict-lifetime, document 3",
+          "url": "https://fixture-c.example/conflict-lifetime",
+          "text": "The Umber records both concern revision A and the same continuous-use test conditions, rather than different hardware revisions.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "lifetime",
+          "aliases": [
+            "rated lifetime"
+          ],
+          "subject": "Umber",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "3,100 hours",
+              "source_ids": [
+                "s1"
+              ]
+            },
+            {
+              "value": "3,700 hours",
+              "source_ids": [
+                "s2"
+              ]
+            }
+          ]
+        }
+      ],
+      "expected_conflicts": [
+        {
+          "source_ids": [
+            "s1",
+            "s2"
+          ],
+          "kind": "numeric"
+        }
+      ],
+      "allowed_conflicts": [
+        {
+          "source_ids": [
+            "s1",
+            "s2"
+          ],
+          "kind": "numeric"
+        }
+      ]
+    },
+    {
+      "id": "scope-population",
+      "fixture_kind": "controlled_synthetic",
+      "category": "scope_date",
+      "question": "Compare Vale city and metropolitan population figures for 2025. Explain whether scope accounts for the difference.",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture scope-population, document 1",
+          "url": "https://fixture-a.example/scope-population",
+          "text": "Vale city population in calendar year 2025 was 58,000 residents inside the legal city boundary, excluding surrounding towns.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture scope-population, document 2",
+          "url": "https://fixture-b.example/scope-population",
+          "text": "Vale metropolitan population in calendar year 2025 was 132,000 residents across the city and its surrounding commuter towns.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture scope-population, document 3",
+          "url": "https://fixture-c.example/scope-population",
+          "text": "The Vale metropolitan boundary contains the legal city and surrounding commuter towns; city and metropolitan totals have different scopes.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "population",
+          "aliases": [
+            "count"
+          ],
+          "subject": "Vale city",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "58,000 residents",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        },
+        {
+          "dimension": "population",
+          "aliases": [
+            "count"
+          ],
+          "subject": "Vale metropolitan",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "132,000 residents",
+              "source_ids": [
+                "s2"
+              ]
+            }
+          ]
+        }
+      ],
+      "expected_conflicts": [
+        {
+          "source_ids": [
+            "s1",
+            "s2"
+          ],
+          "kind": "scope"
+        }
+      ],
+      "allowed_conflicts": [
+        {
+          "source_ids": [
+            "s1",
+            "s2"
+          ],
+          "kind": "scope"
+        }
+      ]
+    },
+    {
+      "id": "date-funding",
+      "fixture_kind": "controlled_synthetic",
+      "category": "scope_date",
+      "question": "Compare Willow funding in 2024 and 2025. Explain whether measurement dates account for the difference.",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture date-funding, document 1",
+          "url": "https://fixture-a.example/date-funding",
+          "text": "Willow awarded funding in fiscal year 2024 totaled USD 12 million. This amount applies only to the fiscal year 2024 awards.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture date-funding, document 2",
+          "url": "https://fixture-b.example/date-funding",
+          "text": "Willow awarded funding in fiscal year 2025 totaled USD 17 million. This amount applies only to the fiscal year 2025 awards.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture date-funding, document 3",
+          "url": "https://fixture-c.example/date-funding",
+          "text": "The Willow award records use identical program definitions but separate fiscal years. Annual funding may change between years.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "2024 funding",
+          "aliases": [
+            "funding 2024"
+          ],
+          "subject": "Willow",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "USD 12 million",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        },
+        {
+          "dimension": "2025 funding",
+          "aliases": [
+            "funding 2025"
+          ],
+          "subject": "Willow",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "USD 17 million",
+              "source_ids": [
+                "s2"
+              ]
+            }
+          ]
+        }
+      ],
+      "expected_conflicts": [
+        {
+          "source_ids": [
+            "s1",
+            "s2"
+          ],
+          "kind": "date"
+        }
+      ],
+      "allowed_conflicts": [
+        {
+          "source_ids": [
+            "s1",
+            "s2"
+          ],
+          "kind": "date"
+        }
+      ]
+    },
+    {
+      "id": "scope-cost",
+      "fixture_kind": "controlled_synthetic",
+      "category": "scope_date",
+      "question": "Compare Xenia equipment-only cost and installed cost in 2025. Explain the cost scope difference.",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture scope-cost, document 1",
+          "url": "https://fixture-a.example/scope-cost",
+          "text": "Xenia equipment-only cost in 2025 is EUR 640 per unit, excluding installation labor and site preparation.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture scope-cost, document 2",
+          "url": "https://fixture-b.example/scope-cost",
+          "text": "Xenia installed cost in 2025 is EUR 910 per unit, including equipment, installation labor, and site preparation.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture scope-cost, document 3",
+          "url": "https://fixture-c.example/scope-cost",
+          "text": "The Xenia installed price includes labor and preparation charges that are excluded from the equipment-only price.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "equipment-only cost",
+          "aliases": [
+            "equipment cost"
+          ],
+          "subject": "Xenia",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "EUR 640 per unit",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ]
+        },
+        {
+          "dimension": "installed cost",
+          "aliases": [],
+          "subject": "Xenia",
+          "kind": "quantitative",
+          "status": "supported",
+          "values": [
+            {
+              "value": "EUR 910 per unit",
+              "source_ids": [
+                "s2"
+              ]
+            }
+          ]
+        }
+      ],
+      "expected_conflicts": [
+        {
+          "source_ids": [
+            "s1",
+            "s2"
+          ],
+          "kind": "scope"
+        }
+      ],
+      "allowed_conflicts": [
+        {
+          "source_ids": [
+            "s1",
+            "s2"
+          ],
+          "kind": "scope"
+        }
+      ]
+    },
+    {
+      "id": "unanswerable-budget",
+      "fixture_kind": "controlled_synthetic",
+      "category": "unanswerable",
+      "question": "What was the Fern program budget in 2025, in USD?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture unanswerable-budget, document 1",
+          "url": "https://fixture-a.example/unanswerable-budget",
+          "text": "Fern operated a training program during fiscal year 2025. The published annual report does not disclose a program budget.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture unanswerable-budget, document 2",
+          "url": "https://fixture-b.example/unanswerable-budget",
+          "text": "Fern delivered training across several regional centers. The activity register names locations without listing financial amounts.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture unanswerable-budget, document 3",
+          "url": "https://fixture-c.example/unanswerable-budget",
+          "text": "Fern participant feedback describes course accessibility and teaching quality; the survey contains no financial information.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "budget",
+          "aliases": [],
+          "subject": "Fern",
+          "kind": "quantitative",
+          "status": "missing",
+          "values": []
+        }
+      ],
+      "expected_conflicts": [],
+      "allowed_conflicts": []
+    },
+    {
+      "id": "unanswerable-future",
+      "fixture_kind": "controlled_synthetic",
+      "category": "unanswerable",
+      "question": "What is the approved 2028 funding for Yarrow in USD?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture unanswerable-future, document 1",
+          "url": "https://fixture-a.example/unanswerable-future",
+          "text": "Yarrow is preparing a funding request for fiscal year 2028. No funding amount has been approved or published for that year.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture unanswerable-future, document 2",
+          "url": "https://fixture-b.example/unanswerable-future",
+          "text": "Yarrow planning documents describe a future expansion proposal and say that an award decision is pending.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture unanswerable-future, document 3",
+          "url": "https://fixture-c.example/unanswerable-future",
+          "text": "Yarrow governance requires a formal approval before proposed funding becomes awarded funding. The latest record reports no approval.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "2028 funding",
+          "aliases": [
+            "funding"
+          ],
+          "subject": "Yarrow",
+          "kind": "quantitative",
+          "status": "missing",
+          "values": []
+        }
+      ],
+      "expected_conflicts": [],
+      "allowed_conflicts": []
+    },
+    {
+      "id": "unanswerable-availability",
+      "fixture_kind": "controlled_synthetic",
+      "category": "unanswerable",
+      "question": "Is Zinnia publicly available for unrestricted ordering?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture unanswerable-availability, document 1",
+          "url": "https://fixture-a.example/unanswerable-availability",
+          "text": "Zinnia is described in an engineering research note. The note contains no statement about ordering or public product availability.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture unanswerable-availability, document 2",
+          "url": "https://fixture-b.example/unanswerable-availability",
+          "text": "Zinnia testing focused on thermal behavior under nominal load. Procurement and customer access were outside the test scope.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture unanswerable-availability, document 3",
+          "url": "https://fixture-c.example/unanswerable-availability",
+          "text": "The Zinnia methods appendix documents laboratory calibration and safety procedures, with no distribution or ordering policy.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "availability",
+          "aliases": [],
+          "subject": "Zinnia",
+          "kind": "availability",
+          "status": "missing",
+          "values": []
+        }
+      ],
+      "expected_conflicts": [],
+      "allowed_conflicts": []
+    },
+    {
+      "id": "unanswerable-date",
+      "fixture_kind": "controlled_synthetic",
+      "category": "unanswerable",
+      "question": "On what exact date was the Acorn dataset first publicly released?",
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Controlled fixture unanswerable-date, document 1",
+          "url": "https://fixture-a.example/unanswerable-date",
+          "text": "Acorn dataset documentation describes a collection of archived measurements. It does not identify the first public release date.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s2",
+          "title": "Controlled fixture unanswerable-date, document 2",
+          "url": "https://fixture-b.example/unanswerable-date",
+          "text": "Acorn metadata uses version labels and contributor names. No public release timestamp appears in the available metadata.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        },
+        {
+          "id": "s3",
+          "title": "Controlled fixture unanswerable-date, document 3",
+          "url": "https://fixture-c.example/unanswerable-date",
+          "text": "The Acorn preservation note describes file formats and archive checksums but omits the history of public distribution.",
+          "published_at": "2026-01-15",
+          "retrieved_at": "2026-01-16T00:00:00+00:00"
+        }
+      ],
+      "expected_facets": [
+        {
+          "dimension": "release date",
+          "aliases": [
+            "date",
+            "first public release date"
+          ],
+          "subject": "Acorn",
+          "kind": "date",
+          "status": "missing",
+          "values": []
+        }
+      ],
+      "expected_conflicts": [],
+      "allowed_conflicts": []
+    }
+  ]
+}

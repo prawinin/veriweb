@@ -1,0 +1,33 @@
+services:
+  api:
+    build:
+      context: .
+      target: api
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      VERIWEB_MODEL_URL: ${VERIWEB_CONTAINER_MODEL_URL:-}
+      VERIWEB_EMBEDDINGS_MODEL: ""
+      VERIWEB_API_HOST: ${VERIWEB_API_BIND:-0.0.0.0}
+      VERIWEB_API_PORT: ${VERIWEB_API_PORT:-8000}
+      OMP_NUM_THREADS: "6"
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    init: true
+    restart: unless-stopped
+  web:
+    build:
+      context: .
+      target: web
+    depends_on:
+      - api
+    environment:
+      VERIWEB_API_URL: http://api:${VERIWEB_API_PORT:-8000}
+      VERIWEB_PUBLIC_ORIGIN: ${VERIWEB_PUBLIC_ORIGIN:-}
+      PORT: ${PORT:-3000}
+      HOSTNAME: ${VERIWEB_WEB_BIND:-0.0.0.0}
+    ports:
+      - "${HOST:-127.0.0.1}:${PORT:-3000}:${PORT:-3000}"
+    init: true
+    restart: unless-stopped
